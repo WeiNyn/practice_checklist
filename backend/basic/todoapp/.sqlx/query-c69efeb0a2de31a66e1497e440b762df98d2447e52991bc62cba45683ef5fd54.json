@@ -1,0 +1,50 @@
+{
+  "db_name": "SQLite",
+  "query": "\n        UPDATE todo\n        SET title = COALESCE(?, title),\n            description = COALESCE(?, description),\n            completed = COALESCE(?, completed),\n            updated_at = ?\n        WHERE id = ?\n        RETURNING id, title, description, completed, created_at, updated_at\n        ",
+  "describe": {
+    "columns": [
+      {
+        "name": "id",
+        "ordinal": 0,
+        "type_info": "Integer"
+      },
+      {
+        "name": "title",
+        "ordinal": 1,
+        "type_info": "Text"
+      },
+      {
+        "name": "description",
+        "ordinal": 2,
+        "type_info": "Text"
+      },
+      {
+        "name": "completed",
+        "ordinal": 3,
+        "type_info": "Bool"
+      },
+      {
+        "name": "created_at",
+        "ordinal": 4,
+        "type_info": "Datetime"
+      },
+      {
+        "name": "updated_at",
+        "ordinal": 5,
+        "type_info": "Datetime"
+      }
+    ],
+    "parameters": {
+      "Right": 5
+    },
+    "nullable": [
+      false,
+      false,
+      true,
+      false,
+      true,
+      true
+    ]
+  },
+  "hash": "c69efeb0a2de31a66e1497e440b762df98d2447e52991bc62cba45683ef5fd54"
+}

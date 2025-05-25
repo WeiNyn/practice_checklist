@@ -1,0 +1,12 @@
+[package]
+name = "checklist"
+version = "0.1.0"
+edition = "2024"
+
+[workspace]
+members = [
+    "backend/basic/todoapp"
+]
+
+[dependencies]
+todoapp = { path = "backend/basic/todoapp" }
