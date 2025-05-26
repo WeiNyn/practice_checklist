@@ -1,0 +1,50 @@
+{
+  "db_name": "SQLite",
+  "query": "\n        INSERT INTO url (original_url, short_url, click_count, created_at, updated_at)\n        VALUES (?, ?, ?, ?, ?)\n        RETURNING id, original_url, short_url, click_count, created_at, updated_at\n        ",
+  "describe": {
+    "columns": [
+      {
+        "name": "id",
+        "ordinal": 0,
+        "type_info": "Integer"
+      },
+      {
+        "name": "original_url",
+        "ordinal": 1,
+        "type_info": "Text"
+      },
+      {
+        "name": "short_url",
+        "ordinal": 2,
+        "type_info": "Text"
+      },
+      {
+        "name": "click_count",
+        "ordinal": 3,
+        "type_info": "Integer"
+      },
+      {
+        "name": "created_at",
+        "ordinal": 4,
+        "type_info": "Datetime"
+      },
+      {
+        "name": "updated_at",
+        "ordinal": 5,
+        "type_info": "Datetime"
+      }
+    ],
+    "parameters": {
+      "Right": 5
+    },
+    "nullable": [
+      false,
+      false,
+      false,
+      false,
+      true,
+      true
+    ]
+  },
+  "hash": "12c7d8f8efb2880d9d8ed034dbd41f91bdbea82ee9d3ec0a808f5493896dd58e"
+}

@@ -6,7 +6,8 @@ edition = "2024"
 [workspace]
 members = [
     "backend/basic/todoapp"
-]
+, "backend/basic/urlshortener"]
 
 [dependencies]
 todoapp = { path = "backend/basic/todoapp" }
+urlshortener = { path = "backend/basic/urlshortener" }
